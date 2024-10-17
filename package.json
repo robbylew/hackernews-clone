@@ -6,7 +6,7 @@
     "clean": "rm -rf dist && rm -rf ./.next",
     "build": "npm run clean && next build && tsc --project tsconfig-server.json",
     "heroku-postbuild": "npm run build",
-    "build:prod": "cross-env NODE_ENV=production npm run build",
+    "build:prod": "cross-env NODE_ENV=development npm run build",
     "build:static-website": "rm -rf build/static && cross-env NODE_ENV=production next build && next export",
     "debug": "cross-env DEBUG=app:* npm start",
     "debug:all": "cross-env DEBUG=* npm start",
